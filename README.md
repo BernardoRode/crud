@@ -21,6 +21,7 @@
 ## 📖 Descrição do Projeto
 
 Este projeto consiste no desenvolvimento de um site voltado para a gestão de contatos em uma agenda. A plataforma simula um ambiente web intuitivo, onde os usuários podem cadastrar, editar e excluir contatos de forma prática e eficiente. A interface é projetada para oferecer uma experiência amigável, facilitando o gerenciamento das informações dos contatos.
+
 ---
 
 ## 🏆 Badges
@@ -51,7 +52,7 @@ Este projeto consiste no desenvolvimento de um site voltado para a gestão de co
 Para configurar e executar o projeto localmente, siga os passos abaixo:
 
 ```bash
-git clone https://github.com/BernardoRode/Sorriso_Perfeito.git
+git clone https://github.com/BernardoRode/crud.git
 cd repositorio
 
 Abra o arquivo index.html no seu navegador preferido.
