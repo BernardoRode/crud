@@ -31,17 +31,23 @@ if ($usuarioValido) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+<link rel="stylesheet" href="style/styleLogin.css">
 </head>
 
 <body>
-    <h2>Login de Usuário</h2>
-    <form action="index.php" method="POST">
-    <input type="text" name="usuario" id="usuario" placeholder="Digite seu usuário"><br><br>
-    <input type="password" name="senha" id="senha" placeholder="Digite sua senha" require><br><br>
-    <button type="submit">Entrar</button><br><br>
-
-</form>
-<a href="cadastro.php">Não tem cadastro? Clique aqui"</a></a>
+    <div id="container-login">
+        <form action="login.php" method="POST">
+        <h2>Login de Usuário</h2>
+            <input type="text" name="usuario" id="usuario" placeholder="Digite seu usuário"><br><br>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required><br><br>
+            <button type="submit">Entrar</button><br><br>
+            <?php if (isset($erroLogin)): ?>
+        <p class="error-message"><?php echo $erroLogin; ?></p>
+    <?php endif; ?>
+    <a href="cadastro.php">Não tem cadastro? Clique aqui</a>
+    </div>
+    </form>
+    <!-- Se houver erro no login, exibe a mensagem -->
 </body>
 
 </html>

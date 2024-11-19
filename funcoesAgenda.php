@@ -1,25 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
-</html>
 <?php
 // Carregar usuario do arquivo
 
 function carregarAgenda()
 {
     $agenda = [];
-    if (file_exists("agenda.txt")) {
-        $dados = file("agenda.txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    if (file_exists("agendas.txt")) {
+        $linhas = file("agendas.txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
-        foreach ($dados as $linha) {
+        foreach ($linhas as $linha) {
             list($nome, $fone) = explode(":", $linha);
             $agenda[] = ["nome" => $nome, "fone" => $fone];
         }
@@ -31,7 +19,7 @@ function carregarAgenda()
 function salvarAgenda($nome, $fone)
 {
     $linha = $nome . ":" . $fone . PHP_EOL;
-    file_put_contents("agenda.txt", $linha, FILE_APPEND);
+    file_put_contents("agendas.txt", $linha, FILE_APPEND);
 }
 
 
@@ -63,7 +51,7 @@ function excluirAgenda($index)
     $agenda = carregarAgenda();
     if (isset($agenda[$index])) {
         unset($agenda[$index]);
-        file_put_contents("agenda.txt", "");
+        file_put_contents("agendas.txt", "");
         foreach ($agenda as $user) {
             salvarAgenda(
                 $user["nome"],
@@ -75,10 +63,10 @@ function excluirAgenda($index)
 
 function alterarAgenda($index, $novoNome, $novoFone)
 {
-    $agenda = carregarUsuarios();
-    if (isset($usuario[$index])) {
-        $usuario[$index] = ["nome" => $novoNome, "fone" => $novoFone];
-        file_put_contents("agenda.txt", "");
+    $agenda = carregarAgenda();
+    if (isset($agenda[$index])) {
+        $agenda[$index] = ["nome" => $novoNome, "fone" => $novoFone];
+        file_put_contents("agendas.txt", "");
         foreach ($agenda as $user) {
             salvarAgenda($user["nome"], $user["fone"]);
         }

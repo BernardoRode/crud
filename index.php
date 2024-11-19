@@ -11,6 +11,7 @@ if (isset($_COOKIE['usuario_logado'])) {
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/styleIndex.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -23,6 +24,11 @@ if (isset($_COOKIE['usuario_logado'])) {
     include 'funcoesAgenda.php';
     carregarAgenda();
     ?>
+    <h3>
+        Agendas Cadastradas
+    </h3>
+    <?php listarAgenda();
+    carregarAgenda(); ?>
 </body>
 
 </html>

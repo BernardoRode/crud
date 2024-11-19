@@ -1,5 +1,5 @@
 <?php
-include"funcoes.php";
+include "funcoes.php";
 if (isset($_GET["editar"])) {
     $index = $_GET["editar"];
     $usuario = carregarUsuarios();
@@ -25,17 +25,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["senha"])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styleAltUsuario.css">
     <title>Document</title>
 </head>
+
 <body>
-    <h2>Alterar usuario</h2>
+    <header>
+        <h2>Alterar usuario</h2>
+    </header>
+
     <form method="POST">
-        <input type="text" name="usuario" value="<?php echo htmlspecialchars($usuarioAtual);?>" required>
-        <input type="password" name="senha" value="<?php echo htmlspecialchars($senhaAtual);?>" required>
+        <input type="text" name="usuario" value="<?php echo htmlspecialchars($usuarioAtual); ?>" required>
+        <input type="password" name="senha" value="<?php echo htmlspecialchars($senhaAtual); ?>" required>
         <button type="submit">Salvar altereção</button>
     </form>
 </body>
+
 </html>

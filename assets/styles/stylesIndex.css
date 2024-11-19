@@ -1,0 +1,97 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo básico do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ff0000;
+    color: #000000;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Estilo do header */
+header {
+    background-color: #ff0000;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header button {
+    background-color: #000000;
+    color: rgb(255, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header button a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+header button:hover {
+    background-color: #ff0000;
+}
+
+/* Estilo da tabela */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #ff0000;
+    color: white;
+}
+
+td {
+    background-color: #fff;
+    color: #333;
+}
+
+td a {
+    color: #ff0000;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s;
+}
+
+td a:hover {
+    background-color: #ff0000;
+    color: white;
+}
+
+/* Estilo para alternar entre excluir/alterar */
+td a:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Adicionando um pouco de espaçamento */
+table, th, td {
+    border-spacing: 0;
+}
+
+/* Estilo para links de excluir e alterar */
+a {
+    text-decoration: none;
+    color: inherit;
+}
