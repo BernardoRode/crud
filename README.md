@@ -55,4 +55,4 @@ Para configurar e executar o projeto localmente, siga os passos abaixo:
 git clone https://github.com/BernardoRode/crud.git
 cd repositorio
 
-Abra o arquivo index.html no seu navegador preferido.
+Escreva no seu navegador http://localhost/crud/login.php
